@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="07a1ceca-6700-45e3-8d71-57d580696230" last-modified="2023-02-16T08:55:54" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>DISTRIBUTION IS FORBIDDEN. DO NOT UPLOAD TO ANY MULTISCANNER OR SHARE ON ANY THREAT INTEL PLATFORM</short_description>
+  <description>Cryptojacking CUEMiner Spread Over OneDrive and Cracks - Part II</description>
+  <keywords />
+  <authored_by>Crimeware Reports</authored_by>
+  <authored_date>2023-02-16T08:55:54</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="b45fb028-643b-4b0c-a1d0-339522869948">
+      <IndicatorItem id="33db077d-0d8f-4942-92a2-eedb4e229be2" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">87665640b8de16f4cba01b05fe7a17f2</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0ce17c62-5e96-4a48-804b-171f549d7259" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">86bcdaf06c01f1c51874ac46790b5f16</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8cd59906-996f-4788-b158-279c9bbbbd5a" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">a52ebdb266bae3c57ee260122b790562</Content>
+      </IndicatorItem>
+      <IndicatorItem id="33d45282-4d10-45ce-96e7-92016e5d7a89" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">d2988143d7e84795460b3eb41006de47</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f5860956-7cb9-4504-9927-26d0dd378dcd" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">a29cb84b2f44a0e3c2bfb4f2febb66ce</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e008f754-1901-44d3-b4b9-eb459d42ad93" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">3c91ad496160f1ca412f878d8b8d4ac5</Content>
+      </IndicatorItem>
+      <IndicatorItem id="62332767-f794-49fc-adba-06bb78009055" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">214202c7111ebbfc065acf69df945c3d</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4927b072-f4b1-4031-888f-c6976bae291b" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">8dae9d3595069685cf4e2e9d7ddef759</Content>
+      </IndicatorItem>
+      <IndicatorItem id="943bd900-821e-4f35-89ca-3526bcf0585c" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">2e60aae45926a3807c22e4faec1220b1</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

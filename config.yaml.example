@@ -1,0 +1,40 @@
+# Office Macro Security Analyzer — пример конфигурации
+# Скопируйте в config.yaml и настройте под себя
+# config.yaml НЕ добавляется в git (см. .gitignore)
+
+# Директория для артефактов анализа
+output_dir: "./results"
+
+# Лимиты размера (МБ)
+max_file_size_mb: 100
+max_extracted_size_mb: 500
+
+# Порог энтропии для флагирования модулей (бит/символ)
+# Типичный VBA: 4.0–4.8 | Base64: ~6.0 | Зашифрованные данные: ~7.5
+entropy_threshold: 5.5
+
+# Количество угроз в итоговой сводке
+top_threats_count: 5
+
+# Удалять временные файлы после анализа
+cleanup_temp: true
+
+# Полностью отключить все внешние запросы (VT, и т.д.)
+offline_mode: false
+
+# Всегда запускать анализ p-code (даже без VBA Stomping)
+always_run_pcode: false
+
+# Максимальная глубина рекурсии для embedded objects
+max_recursion_depth: 3
+
+# Таймаут внешних инструментов (olevba, pcodedmp) в секундах
+subprocess_timeout_sec: 60
+
+# VirusTotal API ключ — ТОЛЬКО через переменную окружения:
+# export OMSA_VT_API_KEY=ваш_ключ
+# НЕ вписывайте ключ сюда напрямую
+# vt_api_key: null
+
+# Путь к директории с YARA-правилами (.yar / .yara)
+# yara_rules_path: "./yara_rules"

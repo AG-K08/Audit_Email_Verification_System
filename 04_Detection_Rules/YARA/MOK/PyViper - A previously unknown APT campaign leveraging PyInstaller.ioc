@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="71fe49bd-a0b0-4ae4-bdf5-2107ac4fdcad" last-modified="2024-04-02T12:39:09" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>DISTRIBUTION IS FORBIDDEN. DO NOT UPLOAD TO ANY MULTISCANNER OR SHARE ON ANY THREAT INTEL PLATFORM</short_description>
+  <description>PyViper - A previously unknown APT campaign leveraging PyInstaller</description>
+  <keywords />
+  <authored_by>APT Reports</authored_by>
+  <authored_date>2024-04-02T12:39:09</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="7daa2963-9581-407e-b67a-9d77ebc8d3ee">
+      <IndicatorItem id="6b8e5c9c-d24b-4f95-a691-8f618b58ada3" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">b874476b29ad120b8b5498f2a74ec14a</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1184163b-9c1a-4d69-b49b-e01b25e1da51" condition="is">
+        <Context document="FileItem" search="FileItem/Sha1sum" type="mir" />
+        <Content type="sha1">8a07a1e74cce79e818d41565638088643d75ff54</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c347e087-f1d7-44a0-acec-417d1d252783" condition="is">
+        <Context document="FileItem" search="FileItem/Sha256sum" type="mir" />
+        <Content type="sha256">ca4ecea5cae3ff7ab2f2b807f6a9d5029e3ab0782e6a01718de4a4e26b5c4f2b</Content>
+      </IndicatorItem>
+      <IndicatorItem id="65a0ee53-22ad-4bf1-8874-55444aae4d8f" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">e53b7fd69fb42dfd2d62e890e299ba0c</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9918eaac-24d7-466a-a4e3-5eca404ae0bf" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">4aebc2c53aaf777ec83c5aa14a43318f</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a5d8fb55-e6ce-4434-84af-48b47585c3f8" condition="is">
+        <Context document="FileItem" search="FileItem/Sha1sum" type="mir" />
+        <Content type="sha1">de942eaf447fa277136caccf741303bd9f958310</Content>
+      </IndicatorItem>
+      <IndicatorItem id="487208f5-c5a8-461b-a135-64a96f56a891" condition="is">
+        <Context document="FileItem" search="FileItem/Sha256sum" type="mir" />
+        <Content type="sha256">f04c1bc048617641eadc42d9fe68c07f509ec5ee25350291b47e3440a8fb6b26</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a39e9f08-d61d-4133-be22-c3bf2eb8dbd0" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">db26b97e4336c353fe009696cf3bced2</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2039070f-2400-4500-8876-aba720bf7aa3" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">aa0e6fc2495b89ff0800465703f1d548</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3a8d0ce6-9665-4078-9c5d-b3d850808df4" condition="is">
+        <Context document="FileItem" search="FileItem/Sha1sum" type="mir" />
+        <Content type="sha1">b7f298bd37a0e6d70d077c2fd556aefbfd316a0f</Content>
+      </IndicatorItem>
+      <IndicatorItem id="441c6467-1c3b-4b67-aa80-e9bb248b8da7" condition="is">
+        <Context document="FileItem" search="FileItem/Sha256sum" type="mir" />
+        <Content type="sha256">c1e570d29911da858f7f22a8ebefc0aaf03cde4428bb7d51e459e9c9c496be14</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3adb7091-5337-4ebf-bfea-fb34246479c0" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">88c2c28670e86164e6dadfacaef11f42</Content>
+      </IndicatorItem>
+      <IndicatorItem id="db92f4da-4c8f-49aa-80d5-c79f480eaa94" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">4712c8b27f90d99a28b3535f0dc5c0bf</Content>
+      </IndicatorItem>
+      <IndicatorItem id="320b867a-b1e6-4005-ae09-176c21d2e589" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">a86cab2ad9919597b1805aba011587d4</Content>
+      </IndicatorItem>
+      <IndicatorItem id="46902202-a139-447a-8fcd-0bb2c2916b80" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">%WINDIR%\temp\log.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem id="02024d2a-a35e-4600-b905-772e7dcc70c8" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">%WINDIR%\temp\ietmp.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a54f835b-e495-4591-af49-12c32b1b6665" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">%PUBLIC%\Downloads\res.txt</Content>
+      </IndicatorItem>
+      <IndicatorItem id="98ecd4d2-23ea-4bfe-ad7a-d9d55026c360" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">%WINDIR%\WinEvents.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="42f300d1-27be-4f96-96c8-785f43cb5745" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">%WINDIR%\GoogleUpdate.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="438eb72b-62b4-47a5-8875-f6f3298c720f" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">%PROGRAMFILES%\internet explorer\ieproxy.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="47a47bc2-f60c-461c-a36a-039b460d48e3" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">%PROGRAMFILES%\nvidia corporation\3d vision\nvStereo.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0dd4c3ce-aec9-465d-8438-95bf07d363bf" condition="is">
+        <Context document="FileItem" search="FileItem/FileName" type="mir" />
+        <Content type="string">c:\nvidia corporation\3d vision\nvStereo.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="744ee63d-3087-446f-8821-08aeaf27fc4f" condition="is">
+        <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="mir" />
+        <Content type="IP">89.42.178.12</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1bb699fa-ae07-4ea5-b3ad-5d67150cc1c4" condition="is">
+        <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="mir" />
+        <Content type="IP">89.42.178.13</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

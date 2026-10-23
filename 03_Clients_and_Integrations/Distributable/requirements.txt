@@ -1,0 +1,11 @@
+oletools==0.60.2
+pcodedmp
+olefile
+pydantic
+pyyaml
+requests
+yara-python
+extract-msg
+pdfminer.six
+# Optional dependencies:
+# ssdeep (requires libfuzzy)

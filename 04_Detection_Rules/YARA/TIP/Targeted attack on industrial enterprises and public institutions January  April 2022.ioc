@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="0feaf682-adab-4f99-afb0-e37b6a1a59de" last-modified="2022-05-23T10:58:41" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>Targeted attack on industrial enterprises and public institutions: January ? April 2022</short_description>
+  <description />
+  <authored_by>ICS Reports</authored_by>
+  <authored_date>2022-05-23T09:59:09</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="1164494d-b00c-4915-a32c-43e4d78396e9">
+      <IndicatorItem id="ce738522-7c3c-404d-83c3-b9ecac102e39" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">0a2e7c01b847d3b1c6eebe6af63dc140</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9584eb47-94cd-4f08-ae05-6cc85a220e5e" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">0a945587e0e11a89d72b4c0b45a4f77e</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7c5dd8be-ce2b-4cb0-886f-6b21b2828cc0" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">10818f47aa4dc2b39a7b5eef652f3c68</Content>
+      </IndicatorItem>
+      <IndicatorItem id="693e81b8-66f6-411c-b8b4-136f96b5ab78" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">1157132504be3bf556a80db8a2ff9395</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5044a3d6-ef40-4119-9d7c-18533c85c0b0" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">11955356232dcf6834515bf111bb5138</Content>
+      </IndicatorItem>
+      <IndicatorItem id="69415394-e389-4486-9142-aaa6d1fc16c7" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">11ba5665ec1dba660401afde64c2b125</Content>
+      </IndicatorItem>
+      <IndicatorItem id="28af9d99-64b1-4a17-9f27-d8781644408a" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">17fa7898d040fa647afa4467921a66cf</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d5131915-17f3-4d01-b398-51860e3398c6" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">180ee3e469bfcfc079e1a46d16440467</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c1e9f8b1-5a43-4d32-a005-a43baadcb3f5" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">1ea58ff469f5ee0fdcf5b30fc19e4cb8</Content>
+      </IndicatorItem>
+      <IndicatorItem id="60342fb4-212c-4849-bb3b-f5c43fa5d758" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">216d9f82ba2b9289e68f9778e1e40ac9</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7e647f2a-11bf-48cf-aab1-e3dab729e152" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">29b62694dc9f720bd09438f37b7b358a</Content>
+      </IndicatorItem>
+      <IndicatorItem id="779d0519-bbdd-429c-8be8-24dd6795b5bd" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">3953eb8f7825e756515be79ef45655b0</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b30dbda0-796e-4307-8954-72f62ad8d33f" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">3a13b99b2567190ab87e8ab745761017</Content>
+      </IndicatorItem>
+      <IndicatorItem id="68e31c80-6c6b-4095-b981-ac60bd9ca1b5" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">40eb08f151859c1fe4dc8e6bc466b06f</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e9e9dd28-ddc5-46e6-ab9e-2fd68ed0efda" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">413fa4ad3afe00b34102c520a91f031c</Content>
+      </IndicatorItem>
+      <IndicatorItem id="512d0780-6d66-4a65-9bd3-8572f78efbcd" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">4866622d249f3ea114495a4a249f3064</Content>
+      </IndicatorItem>
+      <IndicatorItem id="aa0b2773-3d90-485a-9756-91c7cced68de" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">4ad1ad14044bd2c5a5c5e7e7dd954b23</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b7eb6969-66c2-422a-b68f-4aaa0ba3ef18" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">4d42c314ff4341f2d1315d7810bd4e15</Content>
+      </IndicatorItem>
+      <IndicatorItem id="966b45e6-edf1-4042-8c9b-37b0937c5b63" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">51367dc409a7a7e5521c2f700c56a452</Content>
+      </IndicatorItem>
+      <IndicatorItem id="39cbb90a-08a7-4978-8001-13d592e9924e" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">51befd74ac3b8943da58c841017a57a8</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1696b332-deb4-466d-9629-d7daead63a0a" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">56af3279253e4a60bd080dd6a5ca7ba8</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b07ed992-0cc6-4a4f-a7d3-2b1bf99b2cfd" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">5ea338d71d2a49e7b3259bc52f424303</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9afe3185-d5a4-4b54-be38-7a571cddf8b9" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">5eb42e1ba99face02ce50ea1aaf72ab5</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ef46b0c6-b189-4389-9e2e-4ee32625f5b8" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">6038583b155f73faf1b5ef8135154278</Content>
+      </IndicatorItem>
+      <IndicatorItem id="37bb79b9-0972-4f3b-a2ed-307a07568540" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">64ef950d1f31a41fe60c0fd10ca46109</Content>
+      </IndicatorItem>
+      <IndicatorItem id="bee98f17-dd34-4763-b203-c6f045c614fe" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">6652923ce80a073fd985e20b8580e703</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3e567fc8-6252-4e65-9a35-2d26bb0f84e0" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">6bdf1c294b6a34a5769e872d49afd9e7</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2e777aaf-45a4-4b42-848c-80ef06d655e4" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">6dfc3bdd2b70670bf29506e5828f627e</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f41ddea8-f1b1-41d4-a935-0c2f2b931633" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">70da6872b6b2da9ddc94d14b02302917</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d62205b4-9b8c-4ab9-b75a-3ed95fd9dc89" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">7101fe9e82e9b0e727b64608c9fd5df1</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0e66302f-f0b2-4011-98ad-bfb9f8c71217" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">7c383c9ca29f78fcc815eaea9373b4bb</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a20b05cb-667f-46b1-b5ee-0e47c33a3e83" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">7fe40325f0cef8a32e69a6087ebc7157</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3d00aa4d-2cf5-45a8-a0e0-a327f3994e22" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">84df335ebc10633da1524c7dbb836994</Content>
+      </IndicatorItem>
+      <IndicatorItem id="eba58cbc-352f-40a9-9350-fed4c3120146" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">87aa0bedf293e9b16a93e4411353f367</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ae50ef84-571e-4caf-ba74-41aec54115ca" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">94af1b400fdbdebd8eda337474c07479</Content>
+      </IndicatorItem>
+      <IndicatorItem id="278292e8-bb88-43e3-a0f4-5439fadb7803" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">aa7231904a125273f5e5ee55a1441ba4</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7e4b45d6-447b-404c-a2d7-6a630660f8f6" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">ab26f4c877a7357cabf95fb5033a5bef</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3ceddd34-6234-4fbe-997b-7de1838b2aaf" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">ab55a08ed77736ce6d26874187169bc9</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fd4141f2-c0f9-4ccd-b4ed-67dfb10cc0c5" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">ae11f7218e919df5b8a9a2c0dc247f56</Content>
+      </IndicatorItem>
+      <IndicatorItem id="77b8358c-d555-4ccf-ac36-8508aceae70c" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">b2c9f5cae72af5a50940d55bb5b92e98</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c3adc1a8-1d10-4436-b77e-9ef662c0a793" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">c6d6cffd56638a68a0de11035b9c9097</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9f479e8c-d912-4880-b18c-26aa93790d68" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">cbecdfa1d0708d60500864a2a9de4992</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c7180ed0-bb61-4af1-92b5-6a9cff0caf50" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">ccc9482a7bee777bbb08172dccdab8aa</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3e11d904-3d1f-4729-863a-b30e6056aa5c" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">d394f005416a20505c597ecf7882450f</Content>
+      </IndicatorItem>
+      <IndicatorItem id="aca658de-54a6-4648-81e8-3425c7869475" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">d44a276529343f7ac291ad7ad0b99378</Content>
+      </IndicatorItem>
+      <IndicatorItem id="557a71a6-d36c-43a9-a4cd-1af1b4dd5e77" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">d669b03807102b4af87b20ec3731909a</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b95503d5-d707-47df-a8b6-ba4e66b17783" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">da765e4e6b0d2544fe3f71e384812c40</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7ef003af-34a0-4457-81b9-c4f7ac38b1a6" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">e005f5da3ba5d6726da4e6671605b814</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e395be4f-0dce-48d9-aca6-55434689b7fe" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">e2a3cd2b3c2e43ca08d2b9ee78d4919b</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0a3326b1-fb96-49ee-9f00-47d63f16d759" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">e8800d59c411a948ee966ff745fbd5c9</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ebede8db-b3f1-4ee7-b297-ed1a19e4fbfb" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">e8a16193bcd477d8231e6fc1a484dc8a</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6bd37194-f9b9-4b24-87c7-e166f90e0fe4" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">ebcffece1b1af517743d3dffde72cb43</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e88c9907-f743-4786-b341-f8a8416ee6a3" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">f01a9a2d1e31332ed36c1a4d2839f412</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c886b20b-9a5a-459f-ab8a-c155a4a691b7" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">fb2b4c9ca6a7871a98c6e2405e27a21f</Content>
+      </IndicatorItem>
+      <IndicatorItem id="732c6be1-f778-4c64-85db-a7468ca59348" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">ff6d8578be65a31f3624b62e07bef795</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8740d1ac-8bb9-4621-8e1d-fc3d766ec764" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">6860189b79ff35199f99171548f5cd65</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ae6a6237-73bf-47da-87b5-f3e3011c15d9" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">9ec56a18333d4d4e4d3c361d487c05bd</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b14a42f6-14e2-40c6-9754-6765237dbbd3" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">e5b6571e1512d3896f8c2367ddc5a02d</Content>
+      </IndicatorItem>
+      <IndicatorItem id="65f6b392-2df2-4688-bf2e-6c6e7c47e257" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">7cb0d8cffe48df7b531b6bede8137199</Content>
+      </IndicatorItem>
+      <IndicatorItem id="66b62806-6409-4cec-b138-581358bb776c" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">86bb8fa0d00fd94f15ae1bd001037c6c</Content>
+      </IndicatorItem>
+      <IndicatorItem id="312ef9be-eaaf-407e-8182-bbd27899a814" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">9f5bba1acef3ccbbdc789f8813b99067</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f31250c2-1fa1-4b67-b0d1-5925da8cc16d" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">4ea2b943a1d9539e42c5bdba3d3ca7a0</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4821f5fc-ffde-4229-af87-c9570f5c8550" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">5934b7e24d03e92b3dbacbe49f6e677c</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e025d282-30eb-44fb-9f49-d2b418158d5b" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">c8f13c9890ceb695538fdc44ad817278</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c6a2e2f1-8839-4382-84a3-391628b58b5d" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">babdf6fa73e48345f00462c3ef556b86</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e25a0d01-d3bd-4439-9397-67b2d508bdc3" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">cbb7e0b8dde2241480b71b9c648c1501</Content>
+      </IndicatorItem>
+      <IndicatorItem id="62a0d81e-b0d6-4be8-ade2-0d8007fb5b51" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\1\mcinsupd.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f15cc6c1-2b5a-418c-b31b-ba781b336d1f" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\1\mcinsupd.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="635afda1-e081-401e-bdf5-360f1e69655f" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\1\mytilus3.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="12c23f47-a16c-4ede-87cd-d0721d15ee87" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\1C\ace.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="16c42334-da4d-4b50-9c01-cd98b0ae088b" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\2\LiveUpdate.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7c042c03-2bd7-464a-b81f-634b8b7b0284" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\2\safestore64.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1357c5b0-d650-48b6-bcd4-7022e01ee346" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\3\mcinsupd.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="de730135-891d-4412-b24e-c553a21039f8" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\3\mcinsupd.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="32ca4617-0a0f-41f8-a449-3befea7bcc34" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\3\mytilus3.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ea29dff2-3cdd-4868-9b7a-06d15e9a0e26" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\4\LiveUpdate.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b95c6020-a371-4e5c-802d-232f9672d782" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\4\safestore64.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="320fb581-f353-497e-90a5-3e701561ec7f" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Microsoft\MF\Instsrv.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="41e9e0b4-855d-44e6-9f0f-bff114407182" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Microsoft\MF\wus.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0f5a3495-077b-460e-9a4b-eaceb1cd9f26" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\1C\ace.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="41c7f890-23a3-4912-8327-80e4c11d4380" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\2GIS\!research\Remediation.exe\winhelp.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fcdb84dd-b8fd-442b-815a-3644b16bbab1" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\2GIS\conhost.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8cfdd14b-5bb6-4d6a-b1ce-238393df3d91" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\2GIS\conhost.exe.cab</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5738519c-690e-482d-b04c-f369be5d6ef9" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\2GIS\ps.cab</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fe828797-37b7-4e21-9768-1c6c5e85b8ba" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\2GIS\Remediation.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="754e6dfd-8725-4a09-b05e-b318c09089e9" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\2GIS\Remediation.exe.cab</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9ae411e4-6a8b-4a11-988b-0db9ddb9babd" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\2GIS\research\conhost.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e94e0a59-5a5c-4622-8dac-bcbba8d3cc75" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\2GIS\research\Ps.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c2bab792-04a2-43b1-9810-13bf953fd398" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\2GIS\research\Remediation.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4334f423-cf6f-47cd-a92e-bb7e2ea7ad17" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\AADConnect\1.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem id="762cd3e9-1f95-42c9-93c4-65be4729d987" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\AADConnect\bdtkexec.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="be4e6576-30d6-4fc3-8229-df1d85c9f577" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\AADConnect\PtWatchDog.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c129a1ea-a34e-4cf4-85ce-77e016fa838a" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\AADConnect\TmDbgLog.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fac92be9-5ef4-4def-9e85-bf110231baec" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Adobe\ARM\mcsync.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="798547a7-519d-427b-a534-de5905dea9ff" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Adobe\ARM\mcsync.log</Content>
+      </IndicatorItem>
+      <IndicatorItem id="78353ac4-1e8c-412b-b524-2e7ebba3dde4" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Adobe\ARM\McUtil.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="443c76c7-6f4a-4926-8758-d95797c3a53f" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Apple\asOELnch.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b7d1f763-44f1-4377-ba1f-3df5352bcad2" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Apple\ccLib.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3ef16c64-891a-4a12-bb2e-74a2dde01d0c" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Apple\NordLnch.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="711b3d15-503e-4111-899c-4d30e1464992" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\ASUS\ALL\mcsync.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9fe0336c-fb64-4a26-b8a7-77512533e840" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\ASUS\ALL\mcsync.log</Content>
+      </IndicatorItem>
+      <IndicatorItem id="64e1514d-cf24-4247-bd26-9170f31ec1f6" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\ASUS\ALL\McUtil.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="def823d6-1d57-41c5-8f07-404198dc71bf" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Intel\hccutils.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b87db1e7-1708-4e4a-9eae-feb3a4848d26" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Intel\hkcmd.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="535e1cba-f266-4f39-bcdd-01d4249304ba" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Intel\hkSetting.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="70060868-5829-4188-be0d-92d4ea8d0c41" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\AppV\hccutils.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="701b5b5e-2870-4143-9792-a1bb12fd820d" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\AppV\hkcmd.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c737f338-3ea2-4696-8f5e-e051afd00e0d" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\AppV\hkSetting.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0a799abc-6e53-4569-b789-d5713f7b5651" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\Crypto\RSA\asOELnch.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8e1c9306-aba2-435b-8316-67af6d12c59c" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\Crypto\RSA\ccLib.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f8af6939-876f-4b66-8949-b00e47142ee5" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\Crypto\RSA\mcsync.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fa45efc4-5269-4b6e-8d12-0940b4190ed8" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\Crypto\RSA\mcsync.log</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a833b7d4-111c-4077-a414-6f44bb7a3516" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\Crypto\RSA\McUtil.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5c7107fe-739a-419b-8bfd-677c80b051d4" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\Crypto\RSA\NordLnch.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1132046a-cd1d-41ab-a536-61e1e1eaaa22" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\DRM\LiveUpdate.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b4a7a2e5-abb8-4548-90ac-f41f1142c0b0" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\DRM\mcinsupd.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cc8b4d20-5cb0-423a-a7dd-a3d3dc1c23aa" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\DRM\mcinsupd.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7a8b82ce-6693-40de-a97c-b69e7f30bf50" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\DRM\mytilus3.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d6eaf388-60f9-4521-b31f-e66dd3e134bc" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\DRM\safestore64.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="31e4e9ed-9579-4038-97d0-26393200e551" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\MF\Active.GRL</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f94bebd0-c7dc-4cde-bec4-722e1bbb58bb" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\MF\Instsrv.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b5f88382-686d-4b57-b5de-4e03b074b508" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\MF\Pending.GRL</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f0d3355b-c8a0-42cf-b96d-f7d3847d639c" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\MF\wus.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4466bae6-fee3-4e09-8ff6-af416c75f6f3" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\uconhost.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a731b7da-71fe-4a05-9007-46c202354748" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Oracle\ace.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cc3e05c6-7d57-4e4a-b39e-0a2df2311f33" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\sh.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fcf2354b-2619-4d91-86d7-56a023e73e5b" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\0425#.7z.001</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e1896ada-8e28-4aa7-99ba-ad944020d852" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\0425#.7z.002</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b63b9f8d-8449-4dd0-97e8-f31ed32a943f" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\7za.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a3888ccc-9a67-4434-8d7f-6cc1b6ed408e" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\proxy.crt</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6ab1a033-e42b-4c8a-8d27-c303591fda67" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\proxy.crt.tut</Content>
+      </IndicatorItem>
+      <IndicatorItem id="aafc0766-a228-4f8c-be0e-a903639d62ee" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\proxy.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="514f2fb3-d8f6-485b-ba49-d4d14c59491a" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\proxy.exe.tut</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e765516b-3d68-4eb3-bced-2969ee14d610" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\proxy.key</Content>
+      </IndicatorItem>
+      <IndicatorItem id="046d09e4-7926-4048-9b86-5f93929926ce" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\proxy.key.tut</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c7edc961-be50-47f3-a30c-aeb874578aae" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\type.tmp</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5d8f748a-a979-463c-8e92-4a9486a632ca" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\recovery\Use7zap.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cc57a4e7-fcbf-49e9-a2de-8103239fae77" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Users\Default\AppData\Roaming\winset\LiveUpdate.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2ac8e621-6608-4882-97ca-3e134f7e77f5" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Users\Default\AppData\Roaming\winset\safestore64.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0ab37cd3-2a08-462d-9514-2f3ec90c4923" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\System32\Tasks\GUP</Content>
+      </IndicatorItem>
+      <IndicatorItem id="810b5e98-9168-4529-a733-e634958d623d" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\System32\Tasks\hkcmd</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6797c7b9-6800-4128-a7af-23a48c9df733" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\System32\wam.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="43f4a2d1-bd5e-4c44-b065-e4fd9394289b" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\System32\wus.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="0d7da462-b2bc-4215-900c-439f7dd9439b" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\SysWOW64\wus.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b8213fba-a0d5-435b-b9a2-b2e5ba86238f" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Temp\conhost.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8c0f1a75-4552-4ac2-b95f-b684168536b1" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Temp\conhost.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c5a9625d-8324-4ab4-ad49-e97dcf1777c3" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Temp\mcoemcpy.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="e87d6d10-e227-4e0c-950a-1e298e2f7e0f" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Temp\McoemcpyRun.log</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5f4c5ec7-ca66-4781-95e6-42fc109734cb" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Temp\McUtil.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5cb7a1c9-1c3d-4d2b-acbe-efe10dce9897" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Temp\McUtil.dll.cab</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6a2db761-a9db-4997-8c92-3cb0d7a15a9d" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Temp\net.log</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9c2a6620-9bc8-458e-b95f-831b145dd20f" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Temp\smcw.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="175e38a3-6276-4322-954f-5d8cdf10def1" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Web\1.bat</Content>
+      </IndicatorItem>
+      <IndicatorItem id="57c75df8-e11d-4e3e-bbdb-1368c1e0bd9c" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Web\1\hccutils.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5f4e0d43-ae24-4535-9087-d0f573710568" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Web\1\hkcmd.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1eadd3f7-4221-49dd-b536-65d54ba12a4a" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Web\1\hkSetting.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="97298841-20dc-491d-a5b5-053c892ea12e" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Web\ace.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cbd9ee1e-92f1-4ff3-be78-21bce57762af" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Web\Ladon.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3c5c78cc-ed73-4bcd-80f4-5e820f67e54a" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Web\wmic.vbs</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ecc5b8cf-e13a-405f-8ebd-c467272c69b9" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\Network\Downloader\Client.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5cc7fbd2-278c-4209-b23a-54ffd995f978" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Microsoft\Network\Downloader\Update.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7405bef1-282e-414c-925a-841c6f4fbd0b" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\mc.cab</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6634a450-3fb0-404f-b604-2684f6dd46ad" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\my_capture.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4e1f99c5-1cc8-40ca-ac02-c75807d11944" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">%AppData%\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\MpClient.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a083b0a2-ba10-423b-9132-72a5186ef98d" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">%AppData%\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\MsMpEng.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6771bacb-f544-4dda-b3a8-d6955f5d1b1a" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">%AppData%\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\MSCAL.OCX</Content>
+      </IndicatorItem>
+      <IndicatorItem id="873452ed-9069-43a5-ad3a-8deb68086cb5" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">%AppData%\Roaming\Microsoft\MsMpEng.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3f728e63-22e8-4af6-b1f0-0463b1c25704" condition="contains">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\temp\VZLOG*</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5d96e43d-8f42-49cc-b152-d3dca0ed068c" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\temp\wcrypt32.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="c2264dfd-19bb-4bde-9155-91351f5b1bbb" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\temp\wmic.dll</Content>
+      </IndicatorItem>
+      <IndicatorItem id="4d4d3929-5ad3-41c4-b56a-5fb054adb65d" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\ABBYY\FineReader\Client.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a80056e9-25d4-4ce3-8f78-195fa169e341" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\ABBYY\FineReader\debug.log</Content>
+      </IndicatorItem>
+      <IndicatorItem id="3b67d262-54e4-4d67-8fcb-51f51e961f86" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\ABBYY\FineReader\OEMPRINT.CAT</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9bb6da67-224c-44b1-98dd-8641a8081169" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\ABBYY\FineReader\Update.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8e193807-3518-4734-9883-9e53e694a24e" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\ABBYY\FineReader\WINWORD.EXE_</Content>
+      </IndicatorItem>
+      <IndicatorItem id="74bb777d-a975-4e5a-b183-828ee98c5ab0" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\Windows\Temp\Client.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="aa6e76dd-07fc-4bc8-a148-6bb94f16a0d0" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Adobe\Setup\mcinsupd.exe</Content>
+      </IndicatorItem>
+      <IndicatorItem id="eac1e1ef-9711-489e-9f52-4cacfa2bf872" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">C:\ProgramData\Adobe\Setup\mcinsupd.cfg</Content>
+      </IndicatorItem>
+      <IndicatorItem id="33c18baa-86b8-4d42-ab0b-ed32da5077f9" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">custom.songuulcomiss.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="2ee82a92-e0e8-43e8-b4c8-f3e195e74eea" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">doc.redstrpela.net</Content>
+      </IndicatorItem>
+      <IndicatorItem id="1ada1a7b-a3d6-4ccb-b0f4-1ab1f58bfb91" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">fax.internnetionfax.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="136f84f2-bbe2-4b45-b13b-a28e680562c4" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">info.ntcprotek.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="06d3da7f-8fa8-4094-a9ae-4afb6a6e1221" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">server.dotomater.club</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8841802c-6e8f-4df4-a3f1-351c8056d05e" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">tech.songuulcomiss.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d5e66969-ff06-427e-a937-a2f81c7dc9fb" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">video.nicblainfo.net</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fa8bff90-8bf1-495d-9e89-46a88b382e3f" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">www1.dotomater.club</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ae2956a1-46e6-4b21-8b76-54e23c8abf3c" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">www1.nppnavigator.net</Content>
+      </IndicatorItem>
+      <IndicatorItem id="f64a0cf9-bbba-4520-8a66-74ebd517c38c" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">www2.defensysminck.net</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cccb910e-ccef-4b58-bc2d-7f7910109ef1" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">www2.sdelanasnou.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a4ba2fdc-a494-45dd-b78a-3a2099f55bc5" condition="is">
+        <Context document="DnsEntryItem" search="DnsEntryItem/Host" type="mir" />
+        <Content type="string">www3.vpkimplus.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="d757a45a-cfa3-43d3-9029-c2ec13780fea" condition="is">
+        <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="mir" />
+        <Content type="IP">160.202.162.122</Content>
+      </IndicatorItem>
+      <IndicatorItem id="cc45820c-1b94-4bd5-a778-f78623b8ebca" condition="is">
+        <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="mir" />
+        <Content type="IP">192.248.182.121</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7db462e3-8d18-4a9b-bfba-653fb4082398" condition="is">
+        <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="mir" />
+        <Content type="IP">45.151.180.178</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9b3ad99c-25f7-4331-a6f6-6fa4f4405211" condition="is">
+        <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="mir" />
+        <Content type="IP">45.63.27.162</Content>
+      </IndicatorItem>
+      <IndicatorItem id="15896987-c3c2-404c-b569-cabc0545d8fe" condition="is">
+        <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="mir" />
+        <Content type="IP">5.180.174.10</Content>
+      </IndicatorItem>
+      <IndicatorItem id="afb1097f-f919-43a4-be2f-c015441223e8" condition="is">
+        <Context document="RouteEntryItem" search="RouteEntryItem/Destination" type="mir" />
+        <Content type="IP">54.36.189.105</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

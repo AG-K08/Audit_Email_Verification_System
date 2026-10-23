@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <span class="shield-icon">🛡️</span>
+        <h1>Phishing Guard</h1>
+      </div>
+      <span class="version">v2.4.0</span>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card total">
+        <span class="stat-number" id="totalCount">—</span>
+        <span class="stat-label">Проверено</span>
+      </div>
+      <div class="stat-card clean">
+        <span class="stat-number" id="cleanCount">—</span>
+        <span class="stat-label">Чистых</span>
+      </div>
+      <div class="stat-card suspicious">
+        <span class="stat-number" id="suspiciousCount">—</span>
+        <span class="stat-label">Подозрит.</span>
+      </div>
+      <div class="stat-card malicious">
+        <span class="stat-number" id="maliciousCount">—</span>
+        <span class="stat-label">Опасных</span>
+      </div>
+    </section>
+
+    <div class="last-scan" id="lastScan">Последняя проверка: —</div>
+
+    <section class="actions">
+      <button id="btnScan" class="btn btn-primary">
+        <span class="btn-icon">🔍</span> Сканировать
+      </button>
+      <button id="btnUnsubscribeAll" class="btn btn-secondary" style="background-color: #3498db; border-color: #2980b9; color: white;" title="Безопасная отписка от всех найденных рассылок в один клик">
+        <span class="btn-icon">📭</span> Отписаться от всех
+      </button>
+      <button id="btnExport" class="btn btn-secondary">
+        <span class="btn-icon">📄</span> Экспорт
+      </button>
+    </section>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="incidents">⚠️ Инциденты</button>
+      <button class="tab" data-tab="history">📋 Вся история</button>
+    </div>
+    
+    <div class="search-sort-row">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" placeholder="Поиск по теме или автору..." autocomplete="off">
+      </div>
+      <button id="btnSortDate" class="btn-sort" title="Сортировать по дате получения">
+        Дата <span id="sortDir">↓</span>
+      </button>
+    </div>
+
+    <!-- Bulk Actions Bar (always visible when on incidents tab) -->
+    <div class="bulk-bar" id="bulkBar">
+      <label class="select-all-label">
+        <input type="checkbox" id="selectAll"> <span id="bulkCount">Выбрать все</span>
+      </label>
+      <div class="bulk-actions">
+        <button class="btn-sm btn-junk" id="bulkJunk" title="Все в спам">🗑️ Спам</button>
+        <button class="btn-sm btn-safe" id="bulkSafe" title="Все безопасно">✅ Ок</button>
+        <button class="btn-sm btn-delete" id="bulkDelete" title="Удалить все">🚫 Удалить</button>
+      </div>
+    </div>
+
+    <!-- Incidents Tab -->
+    <section class="tab-content active" data-tab="incidents">
+      <div id="incidentList" class="incident-list">
+        <div class="empty-state">Инцидентов не обнаружено ✅</div>
+      </div>
+    </section>
+
+    <!-- History Tab -->
+    <section class="tab-content" data-tab="history">
+      <div id="historyList" class="incident-list">
+        <div class="empty-state">История пуста</div>
+      </div>
+    </section>
+
+    <!-- Detail Panel (overlay) -->
+    <div id="detailPanel" class="detail-panel" style="display:none;">
+      <div class="detail-header">
+        <button id="detailBack" class="detail-back">← Назад</button>
+        <button id="detailOpenInWindow" class="detail-back" style="background: rgba(78,205,196,.15); color: #4ecdc4; border: 1px solid rgba(78,205,196,.3);" title="Открыть отчёт в отдельном постоянном окне">📌 В окне</button>
+        <button id="detailOpen" class="detail-open" title="Открыть письмо в Thunderbird">📧 Открыть письмо</button>
+      </div>
+      <div id="detailContent" class="detail-content"></div>
+    </div>
+
+    <!-- Unsubscribe Progress Panel (overlay) -->
+    <div id="unsubPanel" class="detail-panel" style="display:none; flex-direction: column;">
+      <div class="detail-header" style="align-items: center;">
+        <h2 style="font-size: 14px; color: #ff6b6b; display: flex; align-items: center; gap: 6px; margin: 0;">
+          📭 Процесс отписки от рассылок
+        </h2>
+        <button id="unsubClose" class="detail-back" style="display: none; padding: 4px 10px; font-size: 11px;">Закрыть</button>
+        <button id="unsubStop" class="detail-back" style="background: rgba(233,69,96,.15); color: #e94560; border: 1px solid rgba(233,69,96,.3); padding: 4px 10px; font-size: 11px;">Остановить</button>
+      </div>
+      <div class="detail-content" style="flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 0; margin-top: 10px;">
+        <div style="background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.08); border-radius: 6px; padding: 10px;">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 4px; font-weight: bold; font-size: 12px;">
+            <span id="unsubProgressText">Подготовка...</span>
+            <span id="unsubPercentText">0%</span>
+          </div>
+          <div style="width: 100%; height: 6px; background: rgba(255,255,255,.1); border-radius: 3px; overflow: hidden;">
+            <div id="unsubProgressBar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #3498db, #2ecc71); transition: width 0.2s;"></div>
+          </div>
+        </div>
+        
+        <div style="flex: 1; display: flex; flex-direction: column; min-height: 0;">
+          <h3 style="font-size: 10px; color: #888; text-transform: uppercase; margin-bottom: 4px; font-weight: bold; letter-spacing: .5px;">Лог выполнения:</h3>
+          <div id="unsubLog" style="flex: 1; background: rgba(0,0,0,.3); border: 1px solid rgba(255,255,255,.05); border-radius: 6px; padding: 8px; overflow-y: auto; font-family: 'Consolas', 'Courier New', monospace; font-size: 10px; line-height: 1.4; color: #ccc;">
+            <!-- Live log items will be added here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Chat Panel (overlay) -->
+    <div id="aiChatPanel" class="detail-panel" style="display:none; flex-direction: column;">
+      <div class="detail-header" style="align-items: center;">
+        <h2 style="font-size: 14px; color: #9b59b6; display: flex; align-items: center; gap: 6px; margin: 0;">
+          💬 ИИ-Ассистент <span id="aiModelName" style="font-size: 10px; color: #888; background: rgba(255,255,255,.05); padding: 2px 6px; border-radius: 4px; font-weight: normal;">(определение модели...)</span>
+        </h2>
+        <button id="aiChatClose" class="detail-back" style="padding: 4px 10px; font-size: 11px;">Закрыть</button>
+      </div>
+      <div class="detail-content" style="flex: 1; display: flex; flex-direction: column; gap: 10px; min-height: 0; margin-top: 10px;">
+        <div id="aiChatHistory" style="flex: 1; background: rgba(0,0,0,.3); border: 1px solid rgba(255,255,255,.05); border-radius: 6px; padding: 10px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px;">
+          <!-- Chat messages will be dynamically added here -->
+        </div>
+        
+        <div style="display: flex; gap: 6px; align-items: center; background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.08); border-radius: 6px; padding: 6px;">
+          <input type="text" id="aiChatInput" placeholder="Задайте вопрос или попросите запустить скрипт..." style="flex: 1; background: transparent; border: none; color: #fff; font-size: 12px; outline: none; padding: 4px;" autocomplete="off">
+          <button id="aiChatSend" class="btn btn-primary" style="flex: none; width: auto; padding: 6px 12px; font-size: 11px; background: linear-gradient(135deg, #8e44ad, #9b59b6); border-radius: 4px;">Отправить</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Custom Confirm Modal -->
+    <div id="confirmModal" class="detail-panel" style="display:none; justify-content: center; align-items: center; background: rgba(26,26,46,0.95); z-index: 60;">
+      <div style="background: #222240; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px; max-width: 90%; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+        <h3 style="font-size: 14px; color: #ff6b6b; margin-bottom: 10px; font-weight: bold;">⚠️ Подтверждение отписки</h3>
+        <p style="font-size: 12px; color: #ccc; margin-bottom: 16px; line-height: 1.4;">
+          Вы действительно хотите безопасно отписаться от всех найденных рассылок?<br>
+          <span style="color: #888;">Будут обработаны только проверенные и безопасные (CLEAN) письма.</span>
+        </p>
+        <div style="display: flex; gap: 8px; justify-content: center;">
+          <button id="confirmYes" class="btn btn-primary" style="padding: 6px 16px; font-size: 11px; flex: none; background: #e94560;">Да, отписаться</button>
+          <button id="confirmNo" class="btn btn-secondary" style="padding: 6px 16px; font-size: 11px; flex: none;">Отмена</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">AG-K08 (@And_8) © 2026</footer>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

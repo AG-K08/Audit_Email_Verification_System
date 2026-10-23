@@ -1,0 +1,14 @@
+oletools>=0.60.2
+pcodedmp>=1.2.6
+olefile>=0.47
+pydantic>=2.0.0
+pyyaml>=6.0
+requests>=2.31.0
+
+# Опциональные — установить вручную при необходимости:
+# ssdeep>=3.4          pip install ssdeep
+# yara-python>=4.3.1   pip install yara-python
+
+# oledump — НЕ публикуется на PyPI, устанавливается вручную:
+# Скачать: https://github.com/DidierStevens/DidierStevensSuite/blob/master/oledump.py
+# Поместить файл в: modules/oledump.py

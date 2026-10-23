@@ -1,0 +1,9 @@
+{
+  "name": "thunderbird_phishing_guard",
+  "description": "Bridge to Python Phishing Orchestrator for deep email forensics",
+  "path": "thunderbird_phishing_guard.bat",
+  "type": "stdio",
+  "allowed_extensions": [
+    "thunderbird-phishing-guard@local.fishing"
+  ]
+}

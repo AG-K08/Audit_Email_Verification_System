@@ -1,0 +1,37 @@
+{
+    "{72C24DD5-D70A-438B-8A42-98424B88AFB8}": {
+        "name": "WScript.Shell",
+        "description": "Execution of system commands via WScript.Shell",
+        "severity": "CRITICAL"
+    },
+    "{F935DC22-1CF0-11D0-ADB9-00C04FD58A0B}": {
+        "name": "WScript.Shell (Alternative)",
+        "description": "Execution of system commands via WScript.Shell",
+        "severity": "CRITICAL"
+    },
+    "{ED0BBAC7-19B1-11D1-8DC1-00104BC36113}": {
+        "name": "Scripting.FileSystemObject",
+        "description": "FileSystem manipulation via FSO",
+        "severity": "HIGH"
+    },
+    "{BDD1F04B-858B-11D1-B16A-00C0F0283628}": {
+        "name": "MSCOMCTL ListBox/ListView",
+        "description": "Potential CVE-2012-0158 (Commonly used in exploits)",
+        "severity": "MEDIUM"
+    },
+    "{00020420-0000-0000-C000-000000000046}": {
+        "name": "StdFont (INFO)",
+        "description": "Standard Font object",
+        "severity": "INFO"
+    },
+    "{00020424-0000-0000-C000-000000000046}": {
+        "name": "StdPicture (INFO)",
+        "description": "Standard Picture object",
+        "severity": "INFO"
+    },
+    "{8856F961-340A-11D0-A96B-00C04FD705A2}": {
+        "name": "Microsoft Web Browser (shdocvw)",
+        "description": "Embedded explorer (Potential Template Injection / Beaconing)",
+        "severity": "HIGH"
+    }
+}

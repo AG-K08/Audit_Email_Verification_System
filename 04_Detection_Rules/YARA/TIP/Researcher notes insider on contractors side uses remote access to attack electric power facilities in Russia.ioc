@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<ioc xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="08a063c6-118e-44c9-a12b-f6c2f45856ee" last-modified="2022-11-14T10:04:59" xmlns="http://schemas.mandiant.com/2010/ioc">
+  <short_description>DISTRIBUTION IS FORBIDDEN. DO NOT UPLOAD TO ANY MULTISCANNER OR SHARE ON ANY THREAT INTEL PLATFORM</short_description>
+  <authored_by>ICS Reports</authored_by>
+  <authored_date>2022-11-14T09:34:10</authored_date>
+  <links />
+  <definition>
+    <Indicator operator="OR" id="d80cc3d9-f4cb-4733-9c4d-625b334ff279">
+      <IndicatorItem id="a0b5b537-e93d-4867-a96d-f734957015fd" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">1ECAFBCC7187740E037462B312181319</Content>
+      </IndicatorItem>
+      <IndicatorItem id="15afe258-e2fd-4c8c-aaa7-9f55420a9512" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">FD30EF38227A52E5C96D00257912C247</Content>
+      </IndicatorItem>
+      <IndicatorItem id="fb547b3b-317b-474f-bb0d-b4610656593f" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">E88DAC291E0442AFAAF474B352D9028C</Content>
+      </IndicatorItem>
+      <IndicatorItem id="a31145c5-dc88-4403-b000-357fa5bd1b39" condition="is">
+        <Context document="FileItem" search="FileItem/Md5sum" type="mir" />
+        <Content type="md5">DFD9BBC24F46EE0E1F69623308126CAD</Content>
+      </IndicatorItem>
+      <IndicatorItem id="8caeef04-00cc-45f1-937d-8ab29e9f1ca9" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\home\&lt;username&gt;\dosilka\dosilka.sh</Content>
+      </IndicatorItem>
+      <IndicatorItem id="ca3f4624-7e31-4517-9bc5-03ff617030dc" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\home\&lt;username&gt;\dosilka\list</Content>
+      </IndicatorItem>
+      <IndicatorItem id="b153f6d9-fa9c-48e4-bd86-85cb7bccf007" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\home\&lt;username&gt;\dosilka\start.sh</Content>
+      </IndicatorItem>
+      <IndicatorItem id="6a76c82f-f48e-4ddf-bb81-97c225e09965" condition="is">
+        <Context document="FileItem" search="FileItem/FullPath" type="mir" />
+        <Content type="string">\home\&lt;username&gt;\dosilka\start2.sh</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9a51bbca-78c7-4842-ba5c-cca1bf55b2d7" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">www.notwar.ho.ua</Content>
+      </IndicatorItem>
+      <IndicatorItem id="23fb60a9-1c99-4f13-85a5-25f0d90c3bc2" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">playforukraine.live</Content>
+      </IndicatorItem>
+      <IndicatorItem id="15b38711-7bf0-497a-bcf0-bf6f948c712c" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">tours.testforstudio.com</Content>
+      </IndicatorItem>
+      <IndicatorItem id="9cc42f38-4021-4660-b2d1-d0ee243f3819" condition="contains">
+        <Context document="Network" search="Network/DNS" type="mir" />
+        <Content type="string">russianwarshipgofuckyourself.club</Content>
+      </IndicatorItem>
+      <IndicatorItem id="acf4e2bf-12e3-4416-8b1f-655a5add1256" condition="contains">
+        <Context document="EventLogItem" search="EventLogItem/message" type="mir" />
+        <Content type="string">Trojan-DDoS.Shell.Agent.f</Content>
+      </IndicatorItem>
+      <IndicatorItem id="5164e869-46d9-495a-bddc-d48e71c291b9" condition="contains">
+        <Context document="EventLogItem" search="EventLogItem/message" type="mir" />
+        <Content type="string">Trojan.Shell.Starter.d</Content>
+      </IndicatorItem>
+      <IndicatorItem id="7a565ec5-1ed7-40ae-9c0e-e3f8a4106e34" condition="contains">
+        <Context document="EventLogItem" search="EventLogItem/message" type="mir" />
+        <Content type="string">Trojan-DDoS.Shell.Agent.g</Content>
+      </IndicatorItem>
+    </Indicator>
+  </definition>
+</ioc>

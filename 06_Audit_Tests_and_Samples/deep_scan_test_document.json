@@ -1,0 +1,47 @@
+{
+  "file": "test_document.docx",
+  "size": 35966,
+  "md5": "998079ed409d82f166974b7a2548b88f",
+  "sha256": "ed9712ffe896106fa9e5dfefc9762cbefc60d8a62dee53e3a88b9ffde8fd3d11",
+  "analysis_mode": "in-memory (no Word, no disk write of sample)",
+  "external_urls_whole_file": [],
+  "document_threats": {
+    "format": "openxml",
+    "indicators": []
+  },
+  "ole_streams": {
+    "streams": [],
+    "stream_hits": {}
+  },
+  "tools": {
+    "olevba": {
+      "module": "olevba",
+      "error": "No module named 'oletools'"
+    },
+    "oleid": {
+      "module": "oleid",
+      "error": "No module named 'oletools'"
+    },
+    "oleobj": {
+      "module": "oleobj",
+      "findings": [],
+      "error": "No module named 'oletools'"
+    },
+    "msodde": {
+      "module": "msodde",
+      "dde_links": [],
+      "error": "No module named 'oletools'"
+    }
+  },
+  "oleobj_findings": [],
+  "dde_links": [],
+  "activation_candidates": [],
+  "interpretation": "Статика не нашла явный URL/шаблон в открытом виде. Для Trojan-Downloader.MSOffice.Agent типичен скрытый remote template или поле Word, срабатывающее только при открытии в WINWORD.EXE.",
+  "safe_next_steps": [
+    "Не открывать на рабочей станции.",
+    "KATA / ANY.RUN в изолированной VM: смотреть DNS/HTTP из WINWORD.EXE.",
+    "Зафиксировать скачанный .dotm/.doc и проанализировать его этим же скриптом.",
+    "Заблокировать домены из сетевого отчёта (например adnox.ru).",
+    "Для будущих писем: oleid → oleobj → msodde → olevba → KATA при чистой статике."
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "manifest_version": 2,
+  "name": "Thunderbird Phishing Guard",
+  "version": "4.0.0",
+  "description": "Automatic email security scanner — detects phishing, spoofing, dangerous attachments, and social engineering.",
+  "author": "AG-K08 (@And_8)",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "thunderbird-phishing-guard@local.fishing",
+      "strict_min_version": "115.0"
+    }
+  },
+  "permissions": [
+    "<all_urls>",
+    "accountsRead",
+    "messagesRead",
+    "messagesUpdate",
+    "messagesMove",
+    "messagesDelete",
+    "compose",
+    "storage",
+    "alarms",
+    "notifications",
+    "nativeMessaging"
+  ],
+  "icons": {
+    "16": "icons/icon-16.svg",
+    "32": "icons/icon-32.svg",
+    "48": "icons/icon-48.svg"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "icons/icon-16.svg",
+      "32": "icons/icon-32.svg"
+    },
+    "default_title": "Phishing Guard",
+    "default_popup": "popup/popup.html"
+  },
+  "message_display_action": {
+    "default_icon": {
+      "16": "icons/icon-16.svg",
+      "32": "icons/icon-32.svg"
+    },
+    "default_title": "Phishing Guard - Отчет",
+    "default_popup": "popup/message.html"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}

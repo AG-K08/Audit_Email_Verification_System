@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Phishing Guard — Настройки</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <span class="shield-icon">🛡️</span>
+      <h1>Phishing Guard <span class="sub">Настройки</span></h1>
+    </header>
+
+    <section class="section">
+      <h2>⏱️ Интервал сканирования</h2>
+      <div class="range-group">
+        <input type="range" id="scanInterval" min="1" max="30" value="5">
+        <span id="intervalLabel" class="range-label">5 мин</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>🔔 Уведомления</h2>
+      <label class="toggle-row">
+        <input type="checkbox" id="notifySuspicious">
+        <span class="toggle-label">⚠️ Подозрительные письма (SUSPICIOUS)</span>
+      </label>
+      <label class="toggle-row">
+        <input type="checkbox" id="notifyMalicious">
+        <span class="toggle-label">⛔ Опасные письма (MALICIOUS)</span>
+      </label>
+    </section>
+
+    <section class="section">
+      <h2>🚀 Авто-перемещение в спам</h2>
+      <label class="toggle-row">
+        <input type="checkbox" id="autoMoveToJunk">
+        <span class="toggle-label">Автоматически перемещать в спам при обнаружении</span>
+      </label>
+      <div class="select-group" id="thresholdGroup" style="display:none;">
+        <label class="select-label">Порог срабатывания:</label>
+        <select id="autoMoveThreshold">
+          <option value="MALICIOUS">Только MALICIOUS (≥70 баллов)</option>
+          <option value="SUSPICIOUS">SUSPICIOUS и MALICIOUS (≥35 баллов)</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>✅ Белый список доменов</h2>
+      <p class="hint">По одному домену на строку. Письма от этих доменов не будут проверяться.</p>
+      <textarea id="whitelistDomains" rows="6" placeholder="example.com&#10;company.by&#10;trusted-partner.ru"></textarea>
+    </section>
+
+    <section class="section">
+      <h2>🔬 Глубокий анализ</h2>
+      <label class="toggle-row">
+        <input type="checkbox" id="deepAnalysisEnabled" checked>
+        <span class="toggle-label">Автоматически отправлять письма на глубокий анализ</span>
+      </label>
+      <div class="input-group">
+        <label class="select-label">URL сервера анализа:</label>
+        <input type="text" id="deepAnalysisUrl" value="http://127.0.0.1:5555/analyze" class="text-input">
+      </div>
+      <p class="hint">Запустите <code>python deep_analysis_server.py</code> перед включением. Если сервер недоступен — расширение работает в обычном режиме.</p>
+    </section>
+
+    <section class="section">
+      <h2>🗑️ Данные</h2>
+      <button id="btnClear" class="btn btn-danger">Очистить историю сканирования</button>
+    </section>
+
+    <div class="actions">
+      <button id="btnSave" class="btn btn-primary">💾 Сохранить настройки</button>
+      <span id="saveStatus" class="save-status"></span>
+    </div>
+
+    <footer class="footer">
+      Thunderbird Phishing Guard v2.3 · AG-K08 (@And_8) © 2026
+    </footer>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Test / Coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Temporary analysis outputs / results
+results/
+Reports/
+carved_output/
+carved_metadata/
+FINAL_REPORT.md
+ОТЧЕТ_АНАЛИЗА.txt
+temp/
+tmp/
+*.log
+*.zip
+Extracted_*
+analysis_*.json
+analysis_*.txt
+headers_*.txt
+nuclei_*.jsonl
+*.tmp
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+.cache/
+
+# Personal / Internal Presentation & Audit Notes (kept locally, excluded from GitHub)
+Система_проверки_писем_от_автора.docx
+СИСТЕМА_ПРОВЕРКИ_ПИСЕМ_ПРОСТЫМИ_СЛОВАМИ.md
+RELEASE_READINESS_REPORT.md
+AUDIT_CHECKLIST.md
+.Agent/
+.agents/
+03_Clients_and_Integrations/Distributable/docs/Forensic_Project_History.md
+03_Clients_and_Integrations/Distributable/docs/Project_Case_Studies.md
+05_Methodology_and_Docs/Agent_Skills_Guide.md
+04_Detection_Rules/YARA/castom/*.docx

@@ -1,0 +1,116 @@
+name: Audit CI
+
+on:
+  push:
+    branches: [ "main" ]
+    tags: [ "v*" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+
+jobs:
+  audit-verification:
+    name: Forensic Engine & Regression Tests
+    runs-on: windows-latest
+
+    steps:
+    - name: Enable Longpaths for Windows
+      run: git config --system core.longpaths true
+
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+        cache: "pip"
+
+    - name: Install Forensic Dependencies
+      run: |
+        python -m pip install --upgrade pip setuptools wheel
+        pip install -r requirements.txt
+        pip install bandit
+
+    - name: Syntax Compilation Check (Zero Errors)
+      run: |
+        python -m compileall -q 01_Core_Engines 02_Office_Macro_Analyzer_OMSA 03_Clients_and_Integrations 06_Audit_Tests_and_Samples
+
+    - name: SAST Security Audit (Bandit Linter)
+      run: |
+        bandit -r 01_Core_Engines 02_Office_Macro_Analyzer_OMSA -ll -s B101,B110,B311,B404,B603,B607 --exit-zero
+
+    - name: Run Pytest Regression Suite
+      run: |
+        python -m pytest 06_Audit_Tests_and_Samples/ -v --tb=short
+
+    - name: Verify Key Entry Points
+      run: |
+        python 01_Core_Engines/analyze_email_full.py 06_Audit_Tests_and_Samples/test.eml
+        python 01_Core_Engines/analyze_threats.py 06_Audit_Tests_and_Samples/test.eml
+        python 01_Core_Engines/safe_office_deep_scan.py 06_Audit_Tests_and_Samples/test_document.docx
+        python 01_Core_Engines/office_document_threats.py 06_Audit_Tests_and_Samples/test_document.docx
+        python 01_Core_Engines/metadata_hex_scanner.py 06_Audit_Tests_and_Samples/test_document.docx
+        python 02_Office_Macro_Analyzer_OMSA/office_analyzer.py 06_Audit_Tests_and_Samples/test_document.docx
+
+    - name: Validate YARA Threat Signatures
+      run: |
+        python -c "
+        from pathlib import Path
+        rules_file = Path('04_Detection_Rules/professional_threats.yar')
+        assert rules_file.exists(), 'Rules file missing'
+        content = rules_file.read_text(encoding='utf-8', errors='ignore')
+        assert 'rule ' in content, 'No YARA rules found'
+        print(f'[OK] Verified {rules_file.name} signature definitions.')
+        "
+
+  release-package:
+    name: Build & Publish Release Bundle
+    needs: audit-verification
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: windows-latest
+
+    steps:
+    - name: Enable Longpaths for Windows
+      run: git config --system core.longpaths true
+
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Create Release Archives (ZIP)
+      shell: pwsh
+      run: |
+        $tag = "${{ github.ref_name }}"
+        $zipAirGap = "Audit_Email_Verification_System_${tag}_AirGap_Full.zip"
+        $zipSource = "Audit_Email_Verification_System_${tag}_Source.zip"
+        
+        $excludeAirGap = @(".git", ".github", ".venv", ".pytest_cache", "results")
+        $excludeSource = @(".git", ".github", ".venv", ".pytest_cache", "results", "vendor_wheels")
+        
+        Write-Host "Packaging Full Air-Gap Bundle (with offline vendor_wheels)..."
+        $itemsAirGap = Get-ChildItem -Path . | Where-Object { $excludeAirGap -notcontains $_.Name }
+        Compress-Archive -Path $itemsAirGap.FullName -DestinationPath $zipAirGap -Force
+        
+        Write-Host "Packaging Source Bundle (without vendor_wheels)..."
+        $itemsSource = Get-ChildItem -Path . | Where-Object { $excludeSource -notcontains $_.Name }
+        Compress-Archive -Path $itemsSource.FullName -DestinationPath $zipSource -Force
+        
+        Write-Host "Generating SHA256 checksums..."
+        Get-FileHash -Path $zipAirGap, $zipSource -Algorithm SHA256 | ForEach-Object { "$($_.Hash)  $($_.Path | Split-Path -Leaf)" } | Out-File -FilePath "SHA256SUMS.txt" -Encoding utf8
+        Get-Content "SHA256SUMS.txt"
+
+    - name: Publish to GitHub Releases
+      uses: softprops/action-gh-release@v2
+      with:
+        name: "Release ${{ github.ref_name }} (Red Edition / OMSA v1.0)"
+        files: |
+          Audit_Email_Verification_System_${{ github.ref_name }}_AirGap_Full.zip
+          Audit_Email_Verification_System_${{ github.ref_name }}_Source.zip
+          SHA256SUMS.txt
+        draft: false
+        prerelease: false
+        generate_release_notes: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
